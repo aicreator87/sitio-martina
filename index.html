@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15 Años de Martina</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Audio para reproducción automática -->
+    <audio id="backgroundMusic" autoplay loop>
+        <source src="https://www.bensound.com/bensound-music/bensound-spotlight.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Botón para controlar música SIEMPRE visible -->
+    <button id="musicToggle" class="music-toggle">
+        <i class="fas fa-music"></i>
+    </button>
+
+    <!-- Header con foto de la homenajeada -->
+    <header class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="text-container">
+                <div class="animated-circle"></div>
+                <div class="circle-center-content">
+                    <h1 class="main-title">Martina</h1>
+                    <p class="subtitle" style="margin-top: 80; margin-bottom: 40;">MIS QUINCE AÑOS</p>
+                    <div class="decorative-line"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sección de invitación -->
+    <section class="invitation-section">
+        <div class="container">
+            <div class="invitation-content">
+                <h2 class="section-title">Te invito a celebrar conmigo</h2>
+                <br>
+                <p class="invitation-text">
+                    Vení a compartir este momento tan especial, ¡mis quince años!. Música, comida, diversión y mucho más.
+                </p>
+                    <div class="event-details">
+                    <div class="detail-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <div>
+                            <h3>Fecha</h3>
+                            <p>14 de Diciembre</p>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>Horario</h3>
+                            <p>13:00 hrs</p>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Lugar</h3>
+                            <p>Jano's - Avellaneda 4</p>
+                            <p class="address">Gral. Güemes 897, B1873 Crucecita, Avellaneda</p>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-tshirt"></i>
+                        <div>
+                            <h3>Dress Code</h3>
+                            <p>Elegante Sport</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería de fotos -->
+    <section class="gallery-section">
+        <div class="container">
+            <br>
+            <div class="photo-gallery">
+                <div class="gallery-content">
+                    <div class="gallery-icon">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                   
+                    <p class="gallery-description" style="margin-bottom: 0; margin-top: 0;">
+                        Tu presencia es el mejor regalo, pero si querés sumarte con un mimo, te dejo mi alias: martu.mussii
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- Contador regresivo -->
+    <section class="countdown-section">
+        <div class="container">
+            <h2 class="section-title">¡Te espero!</h2>
+            <div class="countdown-timer" id="countdown">
+                <div class="time-unit">
+                    <span class="number" id="days">00</span>
+                    <span class="label">Días</span>
+                </div>
+                <div class="time-unit">
+                    <span class="number" id="hours">00</span>
+                    <span class="label">Horas</span>
+                </div>
+                <div class="time-unit">
+                    <span class="number" id="minutes">00</span>
+                    <span class="label">Minutos</span>
+                </div>
+                <div class="time-unit">
+                    <span class="number" id="seconds">00</span>
+                    <span class="label">Segundos</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mapa -->
+    <section class="map-section">
+        <div class="container">
+            <h2 class="section-title">Ubicación</h2>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3277.8123456789!2d-58.3616!3d-34.6658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccacb9f8ffd35%3A0x9c2b6e8c5a4d3e2f!2sGral.%20G%C3%BCemes%20897%2C%20B1873%20Avellaneda%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1699123456789"
+                    width="100%" 
+                    height="400" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Botón de confirmación -->
+    <section class="confirmation-section">
+        <div class="container">
+            <h2 class="section-title">Confirmar Asistencia</h2>
+            <br>
+            <p class="confirmation-text">Por favor, confirmame si vas a estar presente para poder organizarnos mejor</p>
+            <button class="confirm-btn" id="confirmBtn">
+                <i class="fas fa-hand-pointer"></i>
+                Confirmar Asistencia
+            </button>
+            <div class="no-attend-link-container">
+                <a href="#" id="noAttendLink" class="no-attend-link">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="9" cy="10" r="1.5" fill="currentColor"/>
+                        <circle cx="15" cy="10" r="1.5" fill="currentColor"/>
+                        <path d="M8 15c0 0 1.5-2 4-2s4 2 4 2" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+                    </svg>
+                    No puedo ir
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal del formulario -->
+    <div class="modal" id="confirmationModal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h2>Confirmación de Asistencia</h2>
+            <form id="confirmationForm">
+                <input type="hidden" name="_subject" id="confirmationSubject" value="">
+                
+                <div class="form-group">
+                    <label for="firstName">Nombre:</label>
+                    <input type="text" id="firstName" name="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Apellido:</label>
+                    <input type="text" id="lastName" name="apellido" required>
+                </div>
+                <div class="form-group">
+                    <label for="dni">DNI:</label>
+                    <input type="text" id="dni" name="dni" required>
+                </div>
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="parking" name="estacionamiento">
+                    <label for="parking">Necesito estacionamiento</label>
+                    <i class="fas fa-info-circle info-icon" id="parkingInfo"></i>
+                    <div class="tooltip" id="parkingTooltip">
+                        Tenemos un stock limitado de estacionamientos, dependiendo las necesidades te vamos a informar si podemos darte uno gratuito.
+                    </div>
+                </div>
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="familyGroup" name="grupo_familiar">
+                    <label for="familyGroup">¿Son un grupo familiar?</label>
+                </div>
+                <div class="form-group" id="familyMembersGroup">
+                    <label for="familyMembers">Cantidad de miembros:</label>
+                    <div class="number-counter">
+                        <button type="button" class="counter-btn" id="decreaseBtn">-</button>
+                        <input type="number" id="familyMembers" name="miembros" value="1" min="1" max="10" readonly>
+                        <button type="button" class="counter-btn" id="increaseBtn">+</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="specialFood">Comida especial (alergias, vegetariano, etc.):</label>
+                    <textarea id="specialFood" name="comida" rows="3" placeholder="Especifica si tienes alguna restricción alimentaria..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-check"></i>
+                    Confirmar
+                </button>
+            </form>
+            
+            <!-- Mensajes de éxito/error -->
+            <div id="confirmationMessage" class="form-message" style="display: none;">
+                <div class="message-content">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>¡Confirmación exitosa!</h3>
+                    <p>Gracias por confirmar tu asistencia. ¡Te esperamos!</p>
+                </div>
+            </div>
+            
+            <div id="confirmationError" class="form-message error" style="display: none;">
+                <div class="message-content">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <h3>Error al enviar</h3>
+                    <p>Hubo un problema al enviar tu confirmación. Por favor, intenta nuevamente.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mensaje de confirmación -->
+    <div class="success-message" id="successMessage">
+        <div class="success-content">
+            <i class="fas fa-check-circle"></i>
+            <h3>¡Confirmación exitosa!</h3>
+            <p>Gracias por confirmar tu asistencia. ¡Te esperamos!</p>
+        </div>
+    </div>
+
+    <!-- Modal No puedo ir -->
+    <div class="modal" id="noAttendModal">
+        <div class="modal-content">
+            <span class="close" id="closeNoAttendModal">&times;</span>
+            <h2>No puedo asistir</h2>
+            <form id="noAttendForm">
+                <input type="hidden" name="_subject" id="noAttendSubject" value="">
+                
+                <div class="form-group">
+                    <label for="noAttendName">Nombre:</label>
+                    <input type="text" id="noAttendName" name="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="noAttendComment">Comentario (opcional):</label>
+                    <textarea id="noAttendComment" name="comentario" rows="2" placeholder="Dejá tu mensaje..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-paper-plane"></i>
+                    Enviar
+                </button>
+            </form>
+            
+            <!-- Mensajes de éxito/error -->
+            <div id="noAttendMessage" class="form-message" style="display: none;">
+                <div class="message-content">
+                    <i class="fas fa-heart-broken"></i>
+                    <h3>Gracias por avisar 😢</h3>
+                    <p>Entendemos que no puedas venir. ¡Te extrañaremos!</p>
+                </div>
+            </div>
+            
+            <div id="noAttendError" class="form-message error" style="display: none;">
+                <div class="message-content">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <h3>Error al enviar</h3>
+                    <p>Hubo un problema al enviar tu mensaje. Por favor, intenta nuevamente.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">Martina</h2>
+            <div class="social-links">
+                <i class="fas fa-heart"></i>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Overlay de bienvenida -->
+    <div id="welcomeOverlay" class="welcome-overlay">
+        <button id="enterBtn" class="enter-btn">Entrar</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
